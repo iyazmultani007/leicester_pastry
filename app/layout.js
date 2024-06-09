@@ -13,20 +13,20 @@ import React, { useEffect, useState } from "react";
 // };
 
 export default function RootLayout({ children }) {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 1000);
+  // }, []);
 
-  const { user } = useAuthContext();
-  const router = useRouter();
+  // const { user } = useAuthContext();
+  // const router = useRouter();
 
   
 
-  React.useEffect(() => {
-    if (user) router.push("/login");
-  }, [user]);
+  // React.useEffect(() => {
+  //   if (user) router.push("/login");
+  // }, [user]);
 
   return (
     <html lang="en">

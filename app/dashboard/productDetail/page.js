@@ -18,6 +18,7 @@ import {
   endBefore,
   Timestamp,
 } from "firebase/firestore";
+import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
 function ProductDetail() {
   const [data, setData] = useState([]);
@@ -159,7 +160,7 @@ function ProductDetail() {
   }, [searchQuery, selectDate, pageSize]);
 
   return (
-    <>
+    <ProtectedRoute>
       <Breadcrumb pageName="Product Detail" />
 
       <div>
@@ -199,7 +200,7 @@ function ProductDetail() {
           setPageSize={setPageSize}
         />
       </div>
-    </>
+    </ProtectedRoute>
   );
 }
 

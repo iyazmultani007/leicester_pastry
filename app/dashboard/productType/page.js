@@ -20,6 +20,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { debounce } from "lodash";
 import SearchInput from "@/components/SearchInput/SearchInput";
+import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
 function ProductType() {
   const [data, setData] = useState([]);
@@ -144,7 +145,7 @@ function ProductType() {
   }, [searchQuery, pageSize]);
 
   return (
-    <>
+    <ProtectedRoute>
       <Breadcrumb pageName="Product Type" />
 
       <div className="">
@@ -172,7 +173,7 @@ function ProductType() {
           setPageSize={setPageSize}
         />
       </div>
-    </>
+    </ ProtectedRoute>
   );
 }
 

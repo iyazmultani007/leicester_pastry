@@ -16,6 +16,7 @@ import {
 } from "firebase/firestore";
 import { useRouter, useParams } from "next/navigation";
 import TabButton from "@/components/TabButton/TabButton";
+import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
 
 function page() {
@@ -135,7 +136,7 @@ function page() {
   }
 
   return (
-    <div>
+    <ProtectedRoute>
       <Breadcrumb pageName={params.slug === "add" ? "Add Product Type" : "Edit Product Type"} />
 
       
@@ -197,7 +198,7 @@ function page() {
           />
         )}
       </div>
-    </div>
+    </ProtectedRoute>
   );
 }
 

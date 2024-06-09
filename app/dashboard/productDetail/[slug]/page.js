@@ -19,6 +19,7 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
+import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
 function page() {
   const [activeButton, setActiveButton] = useState("product");
@@ -252,7 +253,7 @@ function page() {
   };
 
   return (
-    <div>
+    <ProtectedRoute>
       <Breadcrumb
         pageName={
           params.slug === "add" ? "Add Product Deatil" : "Edit Product Deatil"
@@ -361,7 +362,7 @@ function page() {
           />
         ) : null}
       </div>
-    </div>
+    </ProtectedRoute>
   );
 }
 

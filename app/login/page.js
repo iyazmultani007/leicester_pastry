@@ -10,7 +10,7 @@ import { toast, ToastContainer } from 'react-toastify';
 function page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user } = useAuthContext();
+  const { user, login } = useAuthContext();
   const router = useRouter();
 
   
@@ -22,18 +22,28 @@ function page() {
   const handleForm = async (event) => {
     event.preventDefault();
 
-    const { result, error } = await signIn(email, password);
-
-    if (error) {
-      toast.error("Email or Password is incorrect !", {
+    try {
+      await login(email, password);
+      router.push('//dashboard/productDetail');
+    } catch (error) {
+      console.error(error);
+        toast.error("Email or Password is incorrect !", {
         position: "top-right"
       });
-      return console.log("error: ",error);
     }
+
+    // const { result, error } = await signIn(email, password);
+
+    // if (error) {
+    //   toast.error("Email or Password is incorrect !", {
+    //     position: "top-right"
+    //   });
+    //   return console.log("error: ",error);
+    // }
 
     // else successful
     
-    return router.push("/dashboard/productDetail");
+    // return router.push("/dashboard/productDetail");
   };
 
   return (

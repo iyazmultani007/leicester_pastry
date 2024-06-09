@@ -14,6 +14,7 @@ import SecondFoldTable from "@/components/Download/SecondFoldTable";
 import CuttingTable from "@/components/Download/CuttingTable";
 import DoughTable from "@/components/Download/DoughTable";
 import Sample from "@/components/Download/Sample";
+import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
 function page() {
   const params = useParams();
@@ -186,7 +187,7 @@ function page() {
   };
 
   return (
-    <div>
+    <ProtectedRoute>
       <div
         id="pdfContent"
         ref={pdfRef}
@@ -229,7 +230,7 @@ function page() {
       >
         {loading ? "Loading..." : "Generate PDF"}
       </button>
-    </div>
+    </ProtectedRoute>
   );
 }
 

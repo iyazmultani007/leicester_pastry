@@ -1,13 +1,13 @@
-import React from 'react'
-
+"use client";
+import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
+import React from "react";
 
 function page() {
-
-  
-
   return (
-    <div>dashboard</div>
-  )
+    <ProtectedRoute>
+      <div>dashboard</div>
+    </ProtectedRoute>
+  );
 }
 
-export default page
+export default page;
