@@ -7,7 +7,7 @@ import { useAuthContext } from "@/context/AuthContext";
 import { toast, ToastContainer } from 'react-toastify';
   import "react-toastify/dist/ReactToastify.css";
 
-function page() {
+function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { user, login } = useAuthContext();
@@ -274,4 +274,4 @@ function page() {
   );
 }
 
-export default page;
+export default LoginPage;

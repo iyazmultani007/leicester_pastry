@@ -21,7 +21,7 @@ import {
 } from "firebase/firestore";
 import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
-function page() {
+function ProductDetailSlug() {
   const [activeButton, setActiveButton] = useState("product");
   const [selectedOption, setSelectedOption] = useState("");
   const [options, setOptions] = useState([]);
@@ -366,4 +366,4 @@ function page() {
   );
 }
 
-export default page;
+export default ProductDetailSlug;

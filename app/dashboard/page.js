@@ -2,7 +2,7 @@
 import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 import React from "react";
 
-function page() {
+function Dashboard() {
   return (
     <ProtectedRoute>
       <div>dashboard</div>
@@ -10,4 +10,4 @@ function page() {
   );
 }
 
-export default page;
+export default Dashboard;

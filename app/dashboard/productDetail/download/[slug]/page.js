@@ -16,7 +16,7 @@ import DoughTable from "@/components/Download/DoughTable";
 import Sample from "@/components/Download/Sample";
 import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
-function page() {
+function ProductDetailDownload() {
   const params = useParams();
   const [product, setProduct] = useState({});
   const [productType, setProductType] = useState("");
@@ -234,4 +234,4 @@ function page() {
   );
 }
 
-export default page;
+export default ProductDetailDownload;

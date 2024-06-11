@@ -19,7 +19,9 @@ import TabButton from "@/components/TabButton/TabButton";
 import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
 
-function page() {
+
+
+function ProductTypeSlug() {
   const [activeButton, setActiveButton] = useState("first");
   const [productType, setProductType] = useState("");
   const [firstData, setFirstData] = useState({
@@ -202,4 +204,4 @@ function page() {
   );
 }
 
-export default page;
+export default ProductTypeSlug;
